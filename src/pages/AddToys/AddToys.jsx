@@ -146,7 +146,6 @@ function AddToys() {
                             <p className="text-red-500 text-xs italic">{errors.price.message}</p>
                         )}
                     </div>
-
                     <div>
                         <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="rating">
                             Rating
@@ -171,7 +170,6 @@ function AddToys() {
                             <p className="text-red-500 text-xs italic">{errors.rating.message}</p>
                         )}
                     </div>
-
                     <div>
                         <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="quantity">
                             Available Quantity
@@ -187,7 +185,6 @@ function AddToys() {
                             <p className="text-red-500 text-xs italic">{errors.quantity.message}</p>
                         )}
                     </div>
-
                     <div className="col-span-2">
                         <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="description">
                             Detailed Description
@@ -203,7 +200,6 @@ function AddToys() {
                         )}
                     </div>
                 </div>
-
                 <div className="flex justify-end">
                     <button
                         type="submit"
