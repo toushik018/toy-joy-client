@@ -8,6 +8,8 @@ import car3 from '../../../assets/slider/car3.jpg';
 import Gallery from '../../Gallery/Gallery';
 import ShopByCategory from '../../ShopByCategory/ShopByCategory';
 import { Link } from 'react-router-dom';
+import WhyToyJoy from '../../ReviewsPage/ReviewsPage';
+import ReviewsPage from '../../ReviewsPage/ReviewsPage';
 
 const Home = () => {
     const settings = {
@@ -63,6 +65,7 @@ const Home = () => {
                 </Slider>
                 <Gallery />
                 <ShopByCategory></ShopByCategory>
+                <ReviewsPage></ReviewsPage>
             </div>
         </>
     );

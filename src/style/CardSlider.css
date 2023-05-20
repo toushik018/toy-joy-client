@@ -1,0 +1,93 @@
+
+@keyframes move-cards {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+  .card-item {
+    animation: move-cards 10s infinite linear;
+  }
+  
+  
+  @keyframes card-slide-1 {
+    0% {
+      transform: translateX(-100%);
+    }
+    20%,
+    80% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+  
+  @keyframes card-slide-2 {
+    0%,
+    40% {
+      transform: translateX(-100%);
+    }
+    60%,
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes card-slide-3 {
+    0%,
+    60% {
+      transform: translateX(-100%);
+    }
+    80%,
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes card-slide-4 {
+    0%,
+    80% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes card-slide-5 {
+    0% {
+      transform: translateX(0);
+    }
+    20%,
+    80% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+  .card-item-1 {
+    animation-name: card-slide-1;
+  }
+  
+  .card-item-2 {
+    animation-name: card-slide-2;
+  }
+  
+  .card-item-3 {
+    animation-name: card-slide-3;
+  }
+  
+  .card-item-4 {
+    animation-name: card-slide-4;
+  }
+  
+  .card-item-5 {
+    animation-name: card-slide-5;
+  }
+  
