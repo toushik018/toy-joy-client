@@ -9,6 +9,7 @@ import AddToys from "../pages/AddToys/AddToys";
 import AllToys from "../pages/AllToys/AllToys";
 import PrivateRoute from "./PrivateRoute";
 import ToysDetails from "../pages/ToysDetails/ToysDetails";
+import MyToys from "../pages/MyToys/MyToys";
 
 const router = createBrowserRouter([
   {
@@ -42,8 +43,16 @@ const router = createBrowserRouter([
       },
       {
         path: '/toy/:id',
-        element: <PrivateRoute><ToysDetails></ToysDetails></PrivateRoute>
+        element: <PrivateRoute><ToysDetails></ToysDetails></PrivateRoute>,
+        loader: ({params}) => fetch(`https://toy-joy-server-toushik018.vercel.app/alltoys/${params.id}`)
+      },
+      {
+        path: '/mytoys',
+        element: <PrivateRoute><MyToys /></PrivateRoute>,
+        loader: () => fetch('http://localhost:5000/mytoys')
       }
+      
+      
     ]
   },
 ]);

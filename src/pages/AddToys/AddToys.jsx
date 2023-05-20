@@ -1,15 +1,17 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useForm } from "react-hook-form";
 import Swal from "sweetalert2";
+import { AuthContext } from "../../provider/AuthProvider";
 
 function AddToys() {
+    const {user} = useContext(AuthContext);
     const { register, handleSubmit, formState: { errors } } = useForm();
 
     const onSubmit = data => {
         console.log(data);
 
 
-        fetch('http://localhost:5000/addtoys', {
+        fetch('https://toy-joy-server-toushik018.vercel.app/addtoys', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -19,15 +21,16 @@ function AddToys() {
             .then(res => res.json())
             .then(result => {
                 console.log(result);
+                Swal.fire({
+                    position: 'top-end',
+                    icon: 'success',
+                    title: 'Toy have been added',
+                    showConfirmButton: false,
+                    timer: 1500
+                })
             })
 
-        Swal.fire({
-            position: 'top-end',
-            icon: 'success',
-            title: 'Toy have been added',
-            showConfirmButton: false,
-            timer: 1500
-        })
+        
 
     };
 
@@ -75,6 +78,7 @@ function AddToys() {
                         </label>
                         <input
                             {...register("sellerName", { required: "Seller name is required" })}
+                            defaultValue={user.displayName}
                             className="form-input bg-gray-100 border-2 focus:border-indigo-500 focus:ring-indigo-500 rounded-lg py-2 px-4 w-full"
                             id="sellerName"
                             type="text"
@@ -97,6 +101,7 @@ function AddToys() {
                                     message: "Invalid email",
                                 },
                             })}
+                            defaultValue={user.email}
                             className="form-input bg-gray-100 border-2 focus:border-indigo-500 focus:ring-indigo-500 rounded-lg py-2 px-4 w-full"
                             id="sellerEmail"
                             type="email"

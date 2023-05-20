@@ -8,7 +8,7 @@ const Blog = () => {
   }, []);
 
   return (
-    <div className="bg-gradient-to-r from-purple-400 to-pink-500 py-16">
+    <div className="py-16">
       <div className="container mx-auto px-4">
         <h1 className="text-4xl text-white font-bold mb-8">Tech Blog</h1>
 

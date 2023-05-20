@@ -1,33 +1,28 @@
 import Aos from 'aos';
-import React, { useEffect, useState } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import Loader from 'react-loader-spinner';
+import { Link, useLoaderData } from 'react-router-dom';
+import { Rating } from '@smastrom/react-rating'
+import '@smastrom/react-rating/style.css'
 
 const ToysDetails = () => {
-    const [toy, setToy] = useState(null);
-    const { id } = useParams();
+  const toy = useLoaderData();
 
-    useEffect(() => {
-        const fetchToyDetails = async () => {
-            try {
-                const res= await fetch(`http://localhost:5000/toy/${id}`);
-                const data = await res.json();
-                setToy(data);
-            } catch (error) {
-                console.log(error);
-            }
-        };
-        Aos.init({ duration: 800 });
 
-        fetchToyDetails();
-    }, [id]);
 
-    if (!toy) {
-        return <div>Loading toy details...</div>;
-    }
 
-    return (
-        <div className="flex flex-col items-center justify-center h-full">
-            <h2 className='text-3xl font-fold chicle-font mt-4'>Toy Details </h2>
+  Aos.init({ duration: 800 });
+
+
+
+  if (!toy) {
+    return <div className="flex items-center justify-center h-64">
+      <Loader type="Rings" color="#4c51bf" height={80} width={80} />
+    </div>;
+  }
+
+  return (
+    <div className="flex flex-col items-center justify-center h-full lg:p-0 p-2">
+      <h2 className='text-3xl font-fold chicle-font mt-4'>Toy Details </h2>
       <div
         className="max-w-md w-full mt-4 mb-12 bg-white shadow-lg rounded-lg overflow-hidden transform hover:scale-105 transition-transform duration-300"
         data-aos="fade-up"
@@ -38,7 +33,10 @@ const ToysDetails = () => {
           <p className="text-gray-600 mb-2"><span className='text-lg font-semibold'>Seller Name:</span> {toy.sellerName}</p>
           <p className="text-gray-600 mb-2"> <span className='text-lg font-semibold'>Seller Email:</span> {toy.sellerEmail}</p>
           <p className="text-gray-600 mb-2"> <span className='text-lg font-semibold'>Price:</span> ${toy.price}</p>
-          <p className="text-gray-600 mb-2"> <span className='text-lg font-semibold'>Rating: </span>{toy.rating}</p>
+          <div className='flex justify-normal items-center font-bold mb-4'>
+          <Rating style={{ maxWidth: 150 }} value={toy.rating} readOnly />
+          <p className="text-gray-600 mb-2 ml-4 mt-2"> <span className='text-lg font-semibold'></span>{toy.rating}</p>
+          </div>
           <p className="text-gray-600 mb-2"> <span className='text-lg font-semibold'>Available Quantity:</span> {toy.quantity}</p>
           <p className="text-gray-600 mb-2"> <span className='text-lg font-semibold'>Description:</span> {toy.description}</p>
         </div>
@@ -52,7 +50,7 @@ const ToysDetails = () => {
         </Link>
       </div>
     </div>
-    );
+  );
 };
 
 export default ToysDetails;

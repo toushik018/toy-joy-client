@@ -6,6 +6,8 @@ import car1 from '../../../assets/slider/car1.jpg';
 import car2 from '../../../assets/slider/car2.jpg';
 import car3 from '../../../assets/slider/car3.jpg';
 import Gallery from '../../Gallery/Gallery';
+import ShopByCategory from '../../ShopByCategory/ShopByCategory';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
     const settings = {
@@ -13,7 +15,7 @@ const Home = () => {
         infinite: true,
         autoplay: true,
         autoplaySpeed: 3000,
-        speed: 500,
+        speed: 700,
         slidesToShow: 1,
         slidesToScroll: 1,
         arrows: false,
@@ -37,7 +39,7 @@ const Home = () => {
                         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center z-10">
                             <h2 className="text-lg sm:text-2xl md:text-3xl lg:text-4xl font-bold text-white">Welcome to ToyJoy</h2>
                             <p className="text-sm sm:text-base md:text-lg lg:text-xl text-white mt-2 mb-6">Discover a world of fun and imagination with our wide range of toys.</p>
-                            <a href="/shop" className="button text-xs sm:text-sm md:text-base lg:text-lg mt-4">Shop Now</a>
+                            <Link to="/" className="button text-xs sm:text-sm md:text-base lg:text-lg mt-4">Shop Now</Link>
                         </div>
                     </div>
                     <div className="relative">
@@ -46,7 +48,7 @@ const Home = () => {
                         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center z-10">
                             <h2 className="text-lg sm:text-2xl md:text-3xl lg:text-4xl font-bold text-white">Engaging Educational Toys</h2>
                             <p className="text-sm sm:text-base md:text-lg lg:text-xl text-white mt-2 mb-6">Ignite your child's curiosity and learning with our educational toys.</p>
-                            <a href="/categories/educational" className="button text-xs sm:text-sm md:text-base lg:text-lg mt-4">Educational Toys</a>
+                             <Link to="/" className="button text-xs sm:text-sm md:text-base lg:text-lg mt-4">Education Toys</Link>
                         </div>
                     </div>
                     <div className="relative">
@@ -55,11 +57,12 @@ const Home = () => {
                         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center z-10">
                             <h2 className="text-lg sm:text-2xl md:text-3xl lg:text-4xl font-bold text-white">Unleash the Fun with Outdoor Toys</h2>
                             <p className="text-sm sm:text-base md:text-lg lg:text-xl text-white mt-2 mb-6">Let your kids play and enjoy the outdoors with our exciting range of outdoor toys.</p>
-                            <a href="/categories/outdoor" className="button text-xs sm:text-sm md:text-base lg:text-lg mt-4">Discover Outdoor Toys</a>
+                            <Link to="/" className="button text-xs sm:text-sm md:text-base lg:text-lg mt-4">Outdoor toys</Link>
                         </div>
                     </div>
                 </Slider>
                 <Gallery />
+                <ShopByCategory></ShopByCategory>
             </div>
         </>
     );
