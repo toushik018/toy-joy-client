@@ -22,7 +22,7 @@ const MyToys = () => {
 
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/mytoys/${id}`, {
+        fetch(`https://toy-joy-server-toushik018.vercel.app/mytoys/${id}`, {
           method: 'DELETE'
         })
           .then(res => res.json())
@@ -45,7 +45,7 @@ const MyToys = () => {
   };
 
 
-  const url = `http://localhost:5000/mytoys?sellerEmail=${user?.email}`;
+  const url = `https://toy-joy-server-toushik018.vercel.app/mytoys?sellerEmail=${user?.email}`;
   useEffect(() => {
     fetch(url)
       .then(res => res.json())
@@ -95,7 +95,7 @@ const MyToys = () => {
               <td className="py-4 px-6">
                 <div className="flex space-x-4">
                   <Link
-                    to={`/edit-toy/${toy._id}`}
+                    to={`updatetoys/${toy._id}`}
                     className="text-blue-500 hover:text-blue-600"
                   >
                     <RiPencilLine size={20} />

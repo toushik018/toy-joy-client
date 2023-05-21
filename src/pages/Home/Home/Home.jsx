@@ -10,6 +10,7 @@ import ShopByCategory from '../../ShopByCategory/ShopByCategory';
 import { Link } from 'react-router-dom';
 import WhyToyJoy from '../../ReviewsPage/ReviewsPage';
 import ReviewsPage from '../../ReviewsPage/ReviewsPage';
+import NewArrival from '../../NewArrival/NewArrival';
 
 const Home = () => {
     const settings = {
@@ -65,6 +66,7 @@ const Home = () => {
                 </Slider>
                 <Gallery />
                 <ShopByCategory></ShopByCategory>
+                <NewArrival></NewArrival>
                 <ReviewsPage></ReviewsPage>
             </div>
         </>

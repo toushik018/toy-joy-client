@@ -10,6 +10,7 @@ import AllToys from "../pages/AllToys/AllToys";
 import PrivateRoute from "./PrivateRoute";
 import ToysDetails from "../pages/ToysDetails/ToysDetails";
 import MyToys from "../pages/MyToys/MyToys";
+import UpdateToys from "../pages/UpdateToys/UpdateToys";
 
 const router = createBrowserRouter([
   {
@@ -49,7 +50,12 @@ const router = createBrowserRouter([
       {
         path: '/mytoys',
         element: <PrivateRoute><MyToys /></PrivateRoute>,
-        loader: () => fetch('http://localhost:5000/mytoys')
+        loader: () => fetch('https://toy-joy-server-toushik018.vercel.app/mytoys')
+      },
+      {
+        path: '/updatetoys/:id',
+        element: <UpdateToys></UpdateToys>,
+        loader: ({params}) => fetch(`https://toy-joy-server-toushik018.vercel.app/mytoys/${params.id}`)
       }
       
       
