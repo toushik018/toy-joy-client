@@ -6,28 +6,28 @@ const toyData = [
     name: 'Super Speed Racer',
     description: 'Experience the thrill of high-speed racing with this sleek and powerful car. Equipped with advanced features for ultimate performance.',
     price: 39.99,
-    image: 'https://dummyimage.com/400x300/4B5563/FFFFFF&text=Super+Speed+Racer',
+    image: 'https://i.ibb.co/sQ86c85/luis-domenech-JCio3nqgm9g-unsplash.jpg',
   },
   {
     id: 2,
     name: 'Off-Road Adventure Monster',
     description: 'Conquer any terrain with this rugged off-road monster truck. Its sturdy build and large wheels ensure a thrilling and unstoppable adventure.',
     price: 49.99,
-    image: 'https://dummyimage.com/400x300/63B556/FFFFFF&text=Off-Road+Monster',
+    image: 'https://i.ibb.co/Tws7L16/pexels-bhupendra-singh-3358482.jpg',
   },
   {
     id: 3,
     name: 'Convertible Cruiser',
     description: 'Enjoy the open road with this stylish convertible cruiser. Its sleek design and smooth handling make it perfect for a relaxing drive.',
     price: 29.99,
-    image: 'https://dummyimage.com/400x300/B55663/FFFFFF&text=Convertible+Cruiser',
+    image: 'https://i.ibb.co/4Z2hbhM/gabriel-vasiliu-Niu-BAomdr-T4-unsplash.jpg',
   },
   {
     id: 4,
     name: 'Turbo Boost Sports Car',
     description: 'Feel the adrenaline rush with this turbo-charged sports car. With its aerodynamic design and lightning-fast acceleration its built for speed.',
     price: 59.99,
-    image: 'https://dummyimage.com/400x300/5563B5/FFFFFF&text=Turbo+Boost',
+    image: 'https://i.ibb.co/p2wJwVw/pexels-mike-bird-97353.jpg',
   },
 ];
 

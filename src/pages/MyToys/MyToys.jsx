@@ -22,7 +22,7 @@ const MyToys = () => {
 
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`https://toy-joy-server-toushik018.vercel.app/mytoys/${id}`, {
+        fetch(`http://localhost:5000/${id}`, {
           method: 'DELETE'
         })
           .then(res => res.json())
@@ -45,14 +45,15 @@ const MyToys = () => {
   };
 
 
-  const url = `https://toy-joy-server-toushik018.vercel.app/mytoys?sellerEmail=${user?.email}`;
+  // const url = `https://toy-joy-server.vercel.app/search?sellerEmail=${user?.email}`;
   useEffect(() => {
-    fetch(url)
+    fetch('https://toy-joy-server.vercel.app/search?sellerEmail=aaaaa@gmail.com')
       .then(res => res.json())
       .then(data => {
+        console.log(data);
         setToys(data)
 
-        console.log(data);
+        // console.log(data);
       })
   }, [data])
 
@@ -95,7 +96,7 @@ const MyToys = () => {
               <td className="py-4 px-6">
                 <div className="flex space-x-4">
                   <Link
-                    to={`updatetoys/${toy._id}`}
+                    to={`/${toy._id}`}
                     className="text-blue-500 hover:text-blue-600"
                   >
                     <RiPencilLine size={20} />

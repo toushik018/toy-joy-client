@@ -101,7 +101,7 @@ function AddToys() {
                                     message: "Invalid email",
                                 },
                             })}
-                            defaultValue={user.email}
+                            defaultValue={user?.email}
                             className="form-input bg-gray-100 border-2 focus:border-indigo-500 focus:ring-indigo-500 rounded-lg py-2 px-4 w-full"
                             id="sellerEmail"
                             type="email"

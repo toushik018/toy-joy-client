@@ -50,12 +50,12 @@ const router = createBrowserRouter([
       {
         path: '/mytoys',
         element: <PrivateRoute><MyToys /></PrivateRoute>,
-        loader: () => fetch('https://toy-joy-server-toushik018.vercel.app/mytoys')
+        loader: () => fetch('http://localhost:5000/mytoys')
       },
       {
-        path: '/updatetoys/:id',
+        path: ':id',
         element: <UpdateToys></UpdateToys>,
-        loader: ({params}) => fetch(`https://toy-joy-server-toushik018.vercel.app/mytoys/${params.id}`)
+        loader: ({params}) => fetch(`http://localhost:5000/mytoys/${params.id}`)
       }
       
       

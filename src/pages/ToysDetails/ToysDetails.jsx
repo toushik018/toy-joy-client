@@ -7,9 +7,6 @@ import '@smastrom/react-rating/style.css'
 const ToysDetails = () => {
   const toy = useLoaderData();
 
-
-
-
   Aos.init({ duration: 800 });
 
 
