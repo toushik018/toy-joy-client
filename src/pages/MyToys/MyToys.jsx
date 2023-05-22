@@ -8,9 +8,12 @@ import useTitle from '../hooks/useTitle';
 const MyToys = () => {
   const { user } = useContext(AuthContext);
   const [toys, setToys] = useState([]);
+  const [sort, setSort] = useState('asc');
   const data = useLoaderData();
   useTitle('MyToys')
   console.log(data);
+
+
 
   const handleDeleteToy = (id) => {
     Swal.fire({
@@ -49,7 +52,7 @@ const MyToys = () => {
 
   // const url = `https://toy-joy-server.vercel.app/search?sellerEmail=${user?.email}`;
   useEffect(() => {
-    fetch(`https://toy-joy-server.vercel.app/search?sellerEmail=${user.email}`)
+    fetch(`https://toy-joy-server-toushik018.vercel.app/search?sellerEmail=${user.email}&sort=${sort}`)
       .then(res => res.json())
       .then(data => {
         console.log(data);
@@ -57,18 +60,36 @@ const MyToys = () => {
 
         // console.log(data);
       })
-  }, [data])
+  }, [user.email, sort])
 
 
   if (!user) {
     return <div>Please log in to view your toys.</div>;
   }
 
-
+  const handleSortChange = (event) => {
+    setSort(event.target.value);
+  };
 
   return (
     <div className="overflow-x-auto w-full lg:w-4/5 mx-auto mb-12">
       <h2 className="text-2xl font-bold mb-6 chicle-font text-center mt-4">My Toys</h2>
+
+      <div className="flex justify-end mb-4">
+        <label htmlFor="sortSelect" className="mr-2 font-semibold text-xl px-4 py-2">Sort By:</label>
+        <select
+          id="sortSelect"
+          value={sort}
+          onChange={handleSortChange}
+          className="border border-purple-500 rounded px-4 py-2 bg-purple-50 text-purple-500 hover:bg-purple-100 focus:outline-none transition-all duration-300 ease-in-out"
+        >
+          <option value="asc">Price (Low to High)</option>
+          <option value="desc">Price (High to Low)</option>
+        </select>
+      </div>
+
+
+
       <table className="min-w-full divide-y divide-gray-200">
         <thead className="bg-gray-100">
           <tr>

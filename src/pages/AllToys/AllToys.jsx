@@ -42,7 +42,10 @@ function AllToys() {
                         <th className="py-3 px-6 text-left">Sub-category</th>
                         <th className="py-3 px-6 text-left">Price</th>
                         <th className="py-3 px-6 text-left">Available Quantity</th>
-                        <th className="py-3 px-6 text-left">Actions</th>
+                        <th >
+                        <span className="py-3 px-6 text-left hidden sm:inline">Action</span>
+                        <span className=" py-3 px-2 text-left inline sm:hidden">View Details</span>
+                        </th>
                     </tr>
                 </thead>
                 <tbody className="bg-white divide-y divide-gray-200">

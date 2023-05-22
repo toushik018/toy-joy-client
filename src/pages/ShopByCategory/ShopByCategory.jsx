@@ -194,7 +194,8 @@ const ShopByCategory = () => {
                   data-aos="fade-up"
                   data-aos-delay={(index % 3) * 100}
                 >
-                  <LazyLoadImage src={car.pictureUrl} alt={car.name} effect="blur" className="w-full h-full object-cover rounded-t-lg" />
+                   <LazyLoadImage effect="blur"  className="w-full h-64 object-cover object-center rounded-t-lg" src={car.pictureUrl} alt={car.name}  />
+
                   <div className="p-4">
                     <h3 className="text-lg font-semibold mb-2">{car.name}</h3>
                     <p className="text-gray-600 font-semibold mb-2">${car.price}</p>

@@ -34,8 +34,12 @@ const NavBar = () => {
                         <NavLink exact={true.toString()} to="/" className={getNavLinkClass('/')}>Home</NavLink>
                         <NavLink to='/blog' className={getNavLinkClass('/blog')}>Blog</NavLink>
                         <NavLink to='/alltoys' className={getNavLinkClass('/alltoys')}>All Toys</NavLink>
-                        <NavLink to='/mytoys' className={getNavLinkClass('/mytoys')}>My Toys</NavLink>
-                        <NavLink to='/addtoys' className={getNavLinkClass('/addtoys')}>Add A Toy</NavLink>
+                        {user &&
+                            <>
+                                <NavLink to='/mytoys' className={getNavLinkClass('/mytoys')}>My Toys</NavLink>
+                                <NavLink to='/addtoys' className={getNavLinkClass('/addtoys')}>Add A Toy</NavLink>
+                            </>
+                        }
                     </div>
                 </div>
                 <Link to="/" className="flex items-center text-white font-bold py-2 px-4 rounded-lg transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110">
