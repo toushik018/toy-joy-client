@@ -29,14 +29,14 @@ const ShopByCategory = () => {
     slidesToScroll: 1,
     arrows: false,
     responsive: [
-        {
-            breakpoint: 768,
-            settings: {
-                arrows: false,
-            },
+      {
+        breakpoint: 768,
+        settings: {
+          arrows: false,
         },
+      },
     ],
-};
+  };
 
   useEffect(() => {
     fetch("https://toy-joy-server-toushik018.vercel.app/alltoys")
@@ -123,17 +123,17 @@ const ShopByCategory = () => {
                   data-aos-delay={(index % 3) * 100}
                 >
 
-                
 
-                  <LazyLoadImage effect="blur"  className="w-full h-64 object-cover object-center rounded-t-lg" src={car.pictureUrl} alt={car.name}  /> 
-                  
+
+                  <LazyLoadImage effect="blur" className="w-full h-64 object-cover object-center rounded-t-lg" src={car.pictureUrl} alt={car.name} />
+
 
                   <div className="p-4">
                     <h3 className="text-lg font-semibold mb-2">{car.name}</h3>
                     <p className="text-gray-600 mb-2 font-semibold">${car.price}</p>
                     <div className="flex justify-normal items-center font-bold mb-4">
-                    <Rating style={{ maxWidth: 150 }} value={car.rating} readOnly />
-                    <p className="text-purple-600 mb-2 ml-4 mt-2"> {car.rating}</p>
+                      <Rating style={{ maxWidth: 150 }} value={car.rating} readOnly />
+                      <p className="text-purple-600 mb-2 ml-4 mt-2"> {car.rating}</p>
                     </div>
                     <button
                       className="tab_button text-white font-semibold py-2 px-4 rounded"
@@ -160,13 +160,13 @@ const ShopByCategory = () => {
                   data-aos="fade-up"
                   data-aos-delay={(index % 3) * 100}
                 >
-                  <LazyLoadImage effect="blur"  className="w-full h-64 object-cover object-center rounded-t-lg" src={car.pictureUrl} alt={car.name}  /> 
+                  <LazyLoadImage effect="blur" className="w-full h-64 object-cover object-center rounded-t-lg" src={car.pictureUrl} alt={car.name} />
                   <div className="p-4">
                     <h3 className="text-lg font-semibold mb-2">{car.name}</h3>
                     <p className="text-gray-600 mb-2">${car.price}</p>
                     <div className="flex justify-normal items-center font-bold mb-4">
-                    <Rating style={{ maxWidth: 150 }} value={car.rating} readOnly />
-                    <p className="text-purple-600 mb-2 ml-4 mt-2"> {car.rating}</p>
+                      <Rating style={{ maxWidth: 150 }} value={car.rating} readOnly />
+                      <p className="text-purple-600 mb-2 ml-4 mt-2"> {car.rating}</p>
                     </div>
                     <button
                       className="tab_button text-white font-semibold py-2 px-4 rounded"
@@ -194,14 +194,14 @@ const ShopByCategory = () => {
                   data-aos="fade-up"
                   data-aos-delay={(index % 3) * 100}
                 >
-                   <LazyLoadImage effect="blur"  className="w-full h-64 object-cover object-center rounded-t-lg" src={car.pictureUrl} alt={car.name}  />
+                  <LazyLoadImage effect="blur" className="w-full h-64 object-cover object-center rounded-t-lg" src={car.pictureUrl} alt={car.name} />
 
                   <div className="p-4">
                     <h3 className="text-lg font-semibold mb-2">{car.name}</h3>
                     <p className="text-gray-600 font-semibold mb-2">${car.price}</p>
                     <div className="flex justify-normal items-center font-bold mb-4">
-                    <Rating style={{ maxWidth: 150 }} value={car.rating} readOnly />
-                    <p className="text-purple-600 mb-2 ml-4 mt-2"> {car.rating}</p>
+                      <Rating style={{ maxWidth: 150 }} value={car.rating} readOnly />
+                      <p className="text-purple-600 mb-2 ml-4 mt-2"> {car.rating}</p>
                     </div>
                     <button
                       className="tab_button text-white font-semibold py-2 px-4 rounded"

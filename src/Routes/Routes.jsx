@@ -45,7 +45,7 @@ const router = createBrowserRouter([
       {
         path: '/toy/:id',
         element: <PrivateRoute><ToysDetails></ToysDetails></PrivateRoute>,
-        loader: ({params}) => fetch(`https://toy-joy-server-toushik018.vercel.app/alltoys/${params.id}`)
+        loader: ({ params }) => fetch(`https://toy-joy-server-toushik018.vercel.app/alltoys/${params.id}`)
       },
       {
         path: '/mytoys',
@@ -55,10 +55,10 @@ const router = createBrowserRouter([
       {
         path: '/update/:id',
         element: <UpdateToys></UpdateToys>,
-        loader: ({params}) => fetch(`https://toy-joy-server-toushik018.vercel.app/mytoys/${params.id}`)
+        loader: ({ params }) => fetch(`https://toy-joy-server-toushik018.vercel.app/mytoys/${params.id}`)
       }
-      
-      
+
+
     ]
   },
 ]);

@@ -47,7 +47,6 @@ const NavBar = () => {
 
                 </Link>
 
-
             </div>
             <div className="navbar-center hidden lg:flex">
                 <NavLink exact={true.toString()} to="/" className={getNavLinkClass('/')}>Home</NavLink>

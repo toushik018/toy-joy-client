@@ -198,7 +198,7 @@ const Register = () => {
                 Create account
               </button>
             </div>
-            
+
             <div>
               Already have an account? <Link className='text-orange-600 font-bold text-md' to='/login'>Sign in</Link>
             </div>

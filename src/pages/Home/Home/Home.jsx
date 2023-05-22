@@ -8,7 +8,6 @@ import car3 from '../../../assets/slider/car3.jpg';
 import Gallery from '../../Gallery/Gallery';
 import ShopByCategory from '../../ShopByCategory/ShopByCategory';
 import { Link } from 'react-router-dom';
-import WhyToyJoy from '../../ReviewsPage/ReviewsPage';
 import ReviewsPage from '../../ReviewsPage/ReviewsPage';
 import NewArrival from '../../NewArrival/NewArrival';
 import useTitle from '../../hooks/useTitle';
@@ -53,7 +52,7 @@ const Home = () => {
                         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center z-10">
                             <h2 className="text-lg sm:text-2xl md:text-3xl lg:text-4xl font-bold text-white">Engaging Educational Toys</h2>
                             <p className="text-sm sm:text-base md:text-lg lg:text-xl text-white mt-2 mb-6">Ignite your child's curiosity and learning with our educational toys.</p>
-                             <Link to="/" className="button text-xs sm:text-sm md:text-base lg:text-lg mt-4">Education Toys</Link>
+                            <Link to="/" className="button text-xs sm:text-sm md:text-base lg:text-lg mt-4">Education Toys</Link>
                         </div>
                     </div>
                     <div className="relative">

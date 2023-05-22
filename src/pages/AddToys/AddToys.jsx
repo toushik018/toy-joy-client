@@ -5,7 +5,7 @@ import { AuthContext } from "../../provider/AuthProvider";
 import useTitle from "../hooks/useTitle";
 
 function AddToys() {
-    const {user} = useContext(AuthContext);
+    const { user } = useContext(AuthContext);
     const { register, handleSubmit, formState: { errors } } = useForm();
     useTitle('AddToys')
 
@@ -32,7 +32,7 @@ function AddToys() {
                 })
             })
 
-        
+
 
     };
 
