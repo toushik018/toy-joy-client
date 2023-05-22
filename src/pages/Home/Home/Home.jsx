@@ -11,8 +11,10 @@ import { Link } from 'react-router-dom';
 import WhyToyJoy from '../../ReviewsPage/ReviewsPage';
 import ReviewsPage from '../../ReviewsPage/ReviewsPage';
 import NewArrival from '../../NewArrival/NewArrival';
+import useTitle from '../../hooks/useTitle';
 
 const Home = () => {
+    useTitle('Home')
     const settings = {
         dots: true,
         infinite: true,

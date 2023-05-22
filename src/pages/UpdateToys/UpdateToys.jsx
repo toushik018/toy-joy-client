@@ -2,12 +2,13 @@ import React, { useContext } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import { AuthContext } from '../../provider/AuthProvider';
 import Swal from 'sweetalert2';
+import useTitle from '../hooks/useTitle';
 
 
 
 
 const UpdateToys = () => {
-
+    useTitle('UpdateToys')
     const toys = useLoaderData();
     console.log(toys._id);
     const { user } = useContext(AuthContext);

@@ -2,10 +2,12 @@ import React, { useContext } from "react";
 import { useForm } from "react-hook-form";
 import Swal from "sweetalert2";
 import { AuthContext } from "../../provider/AuthProvider";
+import useTitle from "../hooks/useTitle";
 
 function AddToys() {
     const {user} = useContext(AuthContext);
     const { register, handleSubmit, formState: { errors } } = useForm();
+    useTitle('AddToys')
 
     const onSubmit = data => {
         console.log(data);
