@@ -34,7 +34,7 @@ const toyData = [
 const NewArrival = () => {
   return (
     <div className="w-full mx-auto px-4 py-8">
-      <h1 className="text-4xl font-semibold mb-8 chicle-font">New Arrivals</h1>
+      <h1 className="text-4xl font-semibold mb-8 chicle-font">New Arrivals at ToyJoy</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
         {toyData.map((toy) => (
           <div key={toy.id} className="bg-white rounded-lg shadow-md overflow-hidden">
