@@ -4,29 +4,31 @@
 
 
 .container {
-  @apply w-full lg:w-4/5 mx-auto
+  @apply w-full lg: w-4/5 mx-auto
 }
 
 .button {
-  @apply border-2 border-purple-500 text-purple-500 font-semibold py-2 px-4 rounded hover:bg-purple-500 hover:text-white transition duration-300 ease-in-out shadow-md outline-none text-sm sm:text-sm
+  @apply border-2 border-purple-500 text-purple-500 font-semibold py-2 px-4 rounded hover: bg-purple-500 hover:text-white transition duration-300 ease-in-out shadow-md outline-none text-sm sm:text-sm
 }
+
 .button-2 {
-  @apply border-2 border-purple-500 font-semibold py-2 px-4 hover:bg-gradient-to-r from-purple-400 to-purple-500 hover:text-white transition duration-300 ease-in-out shadow-md outline-none text-white rounded-full
+  @apply border-2 border-purple-500 font-semibold py-2 px-4 hover: bg-gradient-to-r from-purple-400 to-purple-500 hover:text-white transition duration-300 ease-in-out shadow-md outline-none text-white rounded-full
 }
-.tab_button{
-  @apply border-2 border-purple-500 font-semibold py-2 px-4 hover:bg-gradient-to-r from-purple-400 to-purple-500 hover:text-white transition duration-300 ease-in-out shadow-md outline-none text-blue-950 rounded-full
+
+.tab_button {
+  @apply border-2 border-purple-500 font-semibold py-2 px-4 hover: bg-gradient-to-r from-purple-400 to-purple-500 hover:text-white transition duration-300 ease-in-out shadow-md outline-none text-blue-950 rounded-full
 }
+
 .button-2 {
-  @apply border-2 border-purple-500 font-semibold py-2 px-4 hover:bg-gradient-to-r from-purple-400 to-purple-500 hover:text-white transition duration-300 ease-in-out shadow-md outline-none text-white rounded-full
+  @apply border-2 border-purple-500 font-semibold py-2 px-4 hover: bg-gradient-to-r from-purple-400 to-purple-500 hover:text-white transition duration-300 ease-in-out shadow-md outline-none text-white rounded-full
 }
 
 
-.nav-btn{
+.nav-btn {
   @apply bg-transparent border-2 border-orange-400 text-orange-500 font-bold py-2 px-4 rounded transition duration-300 ease-in-out
 }
 
 
-.nav-btn-2{
-  @apply text-gray-600 hover:text-red-600 font-bold hover:border-red-600 py-2 px-4 my-2 transition-colors duration-200 ease-in-out outline-none
- }
- 
+.nav-btn-2 {
+  @apply text-gray-600 hover: text-red-600 font-bold hover:border-red-600 py-2 px-4 my-2 transition-colors duration-200 ease-in-out outline-none
+}

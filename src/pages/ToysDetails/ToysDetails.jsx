@@ -33,8 +33,8 @@ const ToysDetails = () => {
           <p className="text-gray-600 mb-2"> <span className='text-lg font-semibold'>Seller Email:</span> {toy.sellerEmail}</p>
           <p className="text-gray-600 mb-2"> <span className='text-lg font-semibold'>Price:</span> ${toy.price}</p>
           <div className='flex justify-normal items-center font-bold mb-4'>
-          <Rating style={{ maxWidth: 150 }} value={toy.rating} readOnly />
-          <p className="text-gray-600 mb-2 ml-4 mt-2"> <span className='text-lg font-semibold'></span>{toy.rating}</p>
+            <Rating style={{ maxWidth: 150 }} value={toy.rating} readOnly />
+            <p className="text-gray-600 mb-2 ml-4 mt-2"> <span className='text-lg font-semibold'></span>{toy.rating}</p>
           </div>
           <p className="text-gray-600 mb-2"> <span className='text-lg font-semibold'>Available Quantity:</span> {toy.quantity}</p>
           <p className="text-gray-600 mb-2"> <span className='text-lg font-semibold'>Description:</span> {toy.description}</p>

@@ -88,53 +88,53 @@ const MyToys = () => {
         </select>
       </div>
 
-<div className='overflow-x-auto'>
-      <table className="min-w-full divide-y divide-gray-200">
-        <thead className="bg-gray-100">
-          <tr>
-            <th className="py-3 px-6 text-left">Image</th>
-            <th className="py-3 px-6 text-left">Seller</th>
-            <th className="py-3 px-6 text-left">Toy Name</th>
-            <th className="py-3 px-6 text-left">Sub-category</th>
-            <th className="py-3 px-6 text-left">Price</th>
-            <th className="py-3 px-6 text-left">Available Quantity</th>
-            <th className="py-3 px-6 text-left">Actions</th>
-          </tr>
-        </thead>
-        <tbody className="bg-white divide-y divide-gray-200">
-          {toys?.map((toy) => (
-            <tr
-              key={toy._id}
-              className="hover:bg-gray-100 transition-colors duration-300"
-            >
-              <td className="py-4 px-6">
-                <img src={toy.pictureUrl} alt={toy.name} className="w-16 h-16 object-cover rounded-lg" />
-              </td>
-              <td className="py-4 px-6">{toy.sellerName}</td>
-              <td className="py-4 px-6">{toy.name}</td>
-              <td className="py-4 px-6">{toy.subCategory}</td>
-              <td className="py-4 px-6">${toy.price}</td>
-              <td className="py-4 px-6">{toy.quantity}</td>
-              <td className="py-4 px-6">
-                <div className="flex space-x-4">
-                  <Link
-                    to={`/update/${toy._id}`}
-                    className="text-blue-500 hover:text-blue-600"
-                  >
-                    <RiPencilLine size={20} />
-                  </Link>
-                  <button
-                    className="text-red-500 hover:text-red-600"
-                    onClick={() => handleDeleteToy(toy._id)}
-                  >
-                    <RiDeleteBin6Line size={20} />
-                  </button>
-                </div>
-              </td>
+      <div className='overflow-x-auto'>
+        <table className="min-w-full divide-y divide-gray-200">
+          <thead className="bg-gray-100">
+            <tr>
+              <th className="py-3 px-6 text-left">Image</th>
+              <th className="py-3 px-6 text-left">Seller</th>
+              <th className="py-3 px-6 text-left">Toy Name</th>
+              <th className="py-3 px-6 text-left">Sub-category</th>
+              <th className="py-3 px-6 text-left">Price</th>
+              <th className="py-3 px-6 text-left">Available Quantity</th>
+              <th className="py-3 px-6 text-left">Actions</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody className="bg-white divide-y divide-gray-200">
+            {toys?.map((toy) => (
+              <tr
+                key={toy._id}
+                className="hover:bg-gray-100 transition-colors duration-300"
+              >
+                <td className="py-4 px-6">
+                  <img src={toy.pictureUrl} alt={toy.name} className="w-16 h-16 object-cover rounded-lg" />
+                </td>
+                <td className="py-4 px-6">{toy.sellerName}</td>
+                <td className="py-4 px-6">{toy.name}</td>
+                <td className="py-4 px-6">{toy.subCategory}</td>
+                <td className="py-4 px-6">${toy.price}</td>
+                <td className="py-4 px-6">{toy.quantity}</td>
+                <td className="py-4 px-6">
+                  <div className="flex space-x-4">
+                    <Link
+                      to={`/update/${toy._id}`}
+                      className="text-blue-500 hover:text-blue-600"
+                    >
+                      <RiPencilLine size={20} />
+                    </Link>
+                    <button
+                      className="text-red-500 hover:text-red-600"
+                      onClick={() => handleDeleteToy(toy._id)}
+                    >
+                      <RiDeleteBin6Line size={20} />
+                    </button>
+                  </div>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
       </div>
     </div>
   );
