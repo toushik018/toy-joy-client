@@ -4,7 +4,7 @@ import '@smastrom/react-rating/style.css'
 
 
 const ReviewsPage = () => {
-  // Dummy data for reviews
+
   const reviews = [
     {
       id: 1,
@@ -50,8 +50,8 @@ const ReviewsPage = () => {
               </div>
             </div>
             <div className="p-4">
-            <Rating style={{ maxWidth: 150 }} value={review.rating} readOnly />
-              
+              <Rating style={{ maxWidth: 150 }} value={review.rating} readOnly />
+
               <p className="text-gray-800 mt-4">{review.review}</p>
             </div>
           </div>
