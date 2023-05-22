@@ -72,24 +72,23 @@ const MyToys = () => {
   };
 
   return (
-    <div className="overflow-x-auto w-full lg:w-4/5 mx-auto mb-12">
+    <div className="container mx-auto my-8">
       <h2 className="text-2xl font-bold mb-6 chicle-font text-center mt-4">My Toys</h2>
 
       <div className="flex justify-end mb-4">
-        <label htmlFor="sortSelect" className="mr-2 font-semibold text-xl px-4 py-2">Sort By:</label>
+        <label htmlFor="sortSelect" className="mr-2 font-semibold text-base lg:text-xl lg:px-4 px-2 py-2">Sort By:</label>
         <select
           id="sortSelect"
           value={sort}
           onChange={handleSortChange}
-          className="border border-purple-500 rounded px-4 py-2 bg-purple-50 text-purple-500 hover:bg-purple-100 focus:outline-none transition-all duration-300 ease-in-out"
+          className="border w-full md:w-64 border-purple-500 rounded px-2 lg:py-2 bg-purple-50 text-purple-500 hover:bg-purple-100 focus:outline-none transition-all duration-300 ease-in-out"
         >
           <option value="asc">Price (Low to High)</option>
           <option value="desc">Price (High to Low)</option>
         </select>
       </div>
 
-
-
+<div className='overflow-x-auto'>
       <table className="min-w-full divide-y divide-gray-200">
         <thead className="bg-gray-100">
           <tr>
@@ -136,6 +135,7 @@ const MyToys = () => {
           ))}
         </tbody>
       </table>
+      </div>
     </div>
   );
 };
