@@ -2,10 +2,13 @@ import React, { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../provider/AuthProvider";
 import Loader from "react-loader-spinner";
+import useTitle from "../hooks/useTitle";
+import { RiArrowRightCircleFill } from "react-icons/ri";
 
 function AllToys() {
     const [toys, setToys] = useState([]);
     const { loading } = useContext(AuthContext);
+    useTitle('AllToys')
 
     useEffect(() => {
         fetch("https://toy-joy-server-toushik018.vercel.app/alltoys")
@@ -57,11 +60,13 @@ function AllToys() {
                             <td className="py-4 px-6">${toy.price}</td>
                             <td className="py-4 px-6">{toy.quantity}</td>
                             <td className="py-4 px-6">
-                                <Link
-                                    to={`/toy/${toy._id}`}
-                                    className="button"
-                                >
-                                    View Details
+                                <Link to={`/toy/${toy._id}`}>
+                                    <span className="hidden sm:inline button sm:mx-auto sm:text-sm">
+                                        View Details
+                                    </span>
+                                    <span className="inline sm:hidden text-purple-700 text-4xl">
+                                        <RiArrowRightCircleFill className="mr-1" />
+                                    </span>
                                 </Link>
                             </td>
                         </tr>

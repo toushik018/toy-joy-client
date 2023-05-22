@@ -7,6 +7,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { AuthContext } from '../../provider/AuthProvider';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import useTitle from '../hooks/useTitle';
 
 
 
@@ -14,6 +15,7 @@ import 'react-toastify/dist/ReactToastify.css';
 const Login = () => {
     const [showPassword, setShowPassword] = useState(false);
     const { SignIn, signInWithGoogle } = useContext(AuthContext);
+    useTitle('Login')
 
     const location = useLocation();
     const navigate = useNavigate();

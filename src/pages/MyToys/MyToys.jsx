@@ -3,11 +3,13 @@ import { Link, useLoaderData } from 'react-router-dom';
 import { AuthContext } from '../../provider/AuthProvider';
 import { RiDeleteBin6Line, RiPencilLine } from "react-icons/ri";
 import Swal from 'sweetalert2';
+import useTitle from '../hooks/useTitle';
 
 const MyToys = () => {
   const { user } = useContext(AuthContext);
   const [toys, setToys] = useState([]);
   const data = useLoaderData();
+  useTitle('MyToys')
   console.log(data);
 
   const handleDeleteToy = (id) => {

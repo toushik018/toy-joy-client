@@ -6,6 +6,7 @@ import { getAuth, updateProfile } from 'firebase/auth';
 import app from '../../firebase/firebase.config';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import useTitle from '../hooks/useTitle';
 
 
 const auth = getAuth(app);
@@ -14,6 +15,7 @@ const Register = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState('');
   const { createUser, logOut } = useContext(AuthContext);
+  useTitle('Register')
 
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);

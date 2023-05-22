@@ -3,9 +3,11 @@ import Loader from 'react-loader-spinner';
 import { Link, useLoaderData } from 'react-router-dom';
 import { Rating } from '@smastrom/react-rating'
 import '@smastrom/react-rating/style.css'
+import useTitle from '../hooks/useTitle';
 
 const ToysDetails = () => {
   const toy = useLoaderData();
+  useTitle('ToysDetails')
 
   Aos.init({ duration: 800 });
 
