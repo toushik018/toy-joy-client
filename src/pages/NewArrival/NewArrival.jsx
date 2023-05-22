@@ -33,21 +33,21 @@ const toyData = [
 
 const NewArrival = () => {
   return (
-    <div className="container mx-auto px-4 py-8">
-      <h1 className="text-4xl font-bold mb-8">New Arrivals</h1>
+    <div className="w-full mx-auto px-4 py-8">
+      <h1 className="text-4xl font-semibold mb-8 chicle-font">New Arrivals</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
         {toyData.map((toy) => (
           <div key={toy.id} className="bg-white rounded-lg shadow-md overflow-hidden">
             <div className="relative h-48">
               <img src={toy.image} alt={toy.name} className="w-full h-full object-cover transform transition-transform hover:scale-105" />
-              <div className="absolute top-2 right-2 bg-white text-gray-500 text-xs p-1 rounded-md">New</div>
+              <div className="absolute top-2 right-2 bg-purple-700 text-white text-xs p-1 rounded-md">New</div>
             </div>
             <div className="p-4">
               <h2 className="text-xl font-semibold mb-2">{toy.name}</h2>
               <p className="text-gray-500 text-sm mb-4">{toy.description}</p>
               <div className="flex items-center justify-between flex-grow">
                 <p className="text-green-500 font-semibold">${toy.price}</p>
-                <button className="bg-blue-500 text-white rounded-md px-4 py-2">Add to Cart</button>
+                <button className="tab_button text-white rounded-md px-4 py-2">Add to Cart</button>
               </div>
             </div>
           </div>

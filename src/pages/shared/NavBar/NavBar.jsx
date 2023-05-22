@@ -1,6 +1,6 @@
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import classNames from 'classnames';
-import logo from '../../../assets/nav_logo.png'
+import logo from '../../../assets/slider/ToyJoy-logos_black.png'
 import { useContext } from 'react';
 import { AuthContext } from '../../../provider/AuthProvider';
 
@@ -39,7 +39,7 @@ const NavBar = () => {
                     </div>
                 </div>
                 <Link to="/" className="flex items-center text-white font-bold py-2 px-4 rounded-lg transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110">
-                    <img src={logo} alt="Logo" className="h-24 w-52 mr-2 p-1" />
+                    <img src={logo} alt="Logo" className="lg:h-28 lg:w-28" />
 
                 </Link>
 

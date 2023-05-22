@@ -95,19 +95,19 @@ const ShopByCategory = () => {
             className="py-2 px-4 text-gray-600 font-bold border-2 mx-1 border-gray-800 hover:text-purple-800 cursor-pointer"
             selectedClassName="bg-purple-500 text-white"
           >
-            <span>Sports Cars</span>
+            <span className="chicle-font font-thin text-2xl">Sports Cars</span>
           </Tab>
           <Tab
             className="py-2 px-4 text-gray-600 font-bold mx-1 border-2 border-gray-800 hover:text-purple-800 cursor-pointer"
             selectedClassName="bg-purple-500 text-white"
           >
-            <span>Regular Cars</span>
+            <span className="chicle-font font-thin text-2xl">Regular Cars</span>
           </Tab>
           <Tab
             className="py-2 px-4 text-gray-600 font-bold mx-1 border-gray-800 border-2 hover:text-purple-800 cursor-pointer"
             selectedClassName="bg-purple-500 text-white"
           >
-            <span>Off-road Cars</span>
+            <span className="chicle-font font-thin text-2xl">Off-road Cars</span>
           </Tab>
         </TabList>
 
