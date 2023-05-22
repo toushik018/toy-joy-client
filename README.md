@@ -11,6 +11,7 @@ ToyJoy is a client-side application built using React. It allows users to browse
 
 - Browse and search for toy cars: Users can explore the collection of toy cars available in the store. They can search for specific toys based on the toy name, making it easier to find their desired items.
 - Toy details and images: Each toy car is displayed with its corresponding image, seller name, sub-category, price, and available quantity. This information helps users make informed decisions about their purchases.
+- User Authentication: To enhance the shopping experience, ToyJoy implements user authentication. Users can create accounts, log in securely, and manage their personal information and order history.
 - Responsive design: The application is designed to be responsive, ensuring a seamless experience across various devices and screen sizes.
 - Loading indicator: While the toy data is being fetched from the server, a loading indicator is displayed to provide feedback to the user.
 - View toy details: Users can click on a toy to navigate to a dedicated page showing more detailed information about the selected toy.
@@ -27,3 +28,4 @@ A live demo of the ToyJoy application can be accessed at [ToyJoy Live Demo](http
 - Tailwind CSS: Utility-first CSS framework for building responsive and customizable user interfaces.
 - Loader: React component for displaying loading indicators.
 - React Icons: Library for using popular icons in React applications.
+- Firebase: A backend-as-a-service platform for authentication and database management.
